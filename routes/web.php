@@ -28,7 +28,7 @@ Route::resource('/tasks', TaskController::class)
     });;
 
 Route::name('users.')->group(function () {
-    Route::prefix('/user')->group(function () {
+    Route::prefix('/users')->group(function () {
         Route::get('/index', [UserController::class, 'index'])->name('index');
         Route::get('/{id}/show', [UserController::class, 'show'])->name('show');
         Route::post('/create', [UserController::class, 'create'])->name('create');
