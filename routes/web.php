@@ -20,7 +20,6 @@ use App\Http\Controllers\UserController;
 */
 
 
-
 Route::get('/', [HomeController::class, 'index']);
 
 Route::resource('/tasks', TaskController::class)
@@ -28,8 +27,8 @@ Route::resource('/tasks', TaskController::class)
         return Redirect::route('tasks.index');
     });;
 
-Route::name('users.')->group(function (){
-    Route::prefix('/user')->group(function (){
+Route::name('users.')->group(function () {
+    Route::prefix('/user')->group(function () {
         Route::get('/index', [UserController::class, 'index'])->name('index');
         Route::get('/{id}/show', [UserController::class, 'show'])->name('show');
         Route::post('/create', [UserController::class, 'create'])->name('create');
