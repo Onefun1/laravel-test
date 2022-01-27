@@ -10,8 +10,8 @@ class UserController extends Controller
 
     public function index()
     {
-//        return 'index method UserController';
-        $users = DB::table('users')->limit(100)->get();
+        return 'index method UserController';
+//        $users = DB::table('users')->limit(100)->get();
     }
 
     public function create()

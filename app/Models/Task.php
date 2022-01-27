@@ -22,4 +22,9 @@ class Task extends Model
     {
         return $this->belongsTo(User::class, 'creator_id', 'id');
     }
+
+    public function history()
+    {
+        return $this->hasMany(History::class, 'task_id', 'id');
+    }
 }

@@ -34,6 +34,7 @@ Route::name('users.')->group(function () {
         Route::post('/create', [UserController::class, 'create'])->name('create');
         Route::post('/auth', [UserController::class, 'auth'])->name('auth');
         Route::delete('/delete', [UserController::class, 'delete'])->name('delete');
+        Route::get('/test', [HomeController::class, 'test']);
     });
 });
 
